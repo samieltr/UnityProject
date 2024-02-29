@@ -34,7 +34,7 @@ public class GameManeger : MonoBehaviour
     {
         while (oyunAktifmi == true)
         {
-            yield return new WaitForSeconds(spawnSuresi); //spawn süresi
+            yield return new WaitForSeconds(spawnSuresi); //spawn sÃ¼resi
             int index = Random.Range(0,meyveler.Count);
             Instantiate(meyveler[index]);
         }
@@ -46,7 +46,7 @@ public class GameManeger : MonoBehaviour
         {
             kalanSure -=Time.deltaTime;
             int tamSayiSure = Mathf.RoundToInt(kalanSure);
-            geriSayim.text = "Kalan Süre: " + tamSayiSure;
+            geriSayim.text = "Kalan SÃ¼re: " + tamSayiSure;
             winGame();
 
             if (kalanSure <= 0)
@@ -102,14 +102,14 @@ public class GameManeger : MonoBehaviour
     {
         for (int i = 0; i < mey.Length; i++)
         {
-            int rastgeleSayi = Random.Range(1, 2); // Her iterasyonda yeni bir rastgele sayý oluþturun
-            mey[i] = rastgeleSayi; // Her meyveye farklý bir rastgele sayýyý atayýn
+            int rastgeleSayi = Random.Range(1, 11); // Her iterasyonda yeni bir rastgele sayÃ½ oluÃ¾turun
+            mey[i] = rastgeleSayi; // Her meyveye farklÃ½ bir rastgele sayÃ½yÃ½ atayÃ½n
         }
         meyve1.text = "Elma: " + mey[0];
         meyve2.text = "Armut: " + mey[1];
-        meyve3.text = "Çilek: " + mey[2];
+        meyve3.text = "Ã‡ilek: " + mey[2];
         meyve4.text = "Muz: " + mey[3];
-        meyve5.text = "Viþne: " + mey[4];
+        meyve5.text = "ViÃ¾ne: " + mey[4];
 
     }
 }
