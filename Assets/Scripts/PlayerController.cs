@@ -51,14 +51,7 @@ public class PlayerController : MonoBehaviour
         {
             transform.position = new Vector3(transform.position.x, transform.position.y, znegsinir);
         }
-        if (transform.position.z > zpozsinir)
-        {
-            transform.position = new Vector3(transform.position.x, transform.position.y, zpozsinir);
-        }
-        else if (transform.position.z < znegsinir)
-        {
-            transform.position = new Vector3(transform.position.x, transform.position.y, znegsinir);
-        }
+
     }
 
     private void OnTriggerEnter(Collider other)
@@ -85,7 +78,7 @@ public class PlayerController : MonoBehaviour
         else if (other.gameObject.CompareTag("Meyve3") && gameManeger.mey[2] > 0)
         {
             gameManeger.mey[2]--;
-            gameManeger.meyve3.text = "Çilek: " + gameManeger.mey[2];
+            gameManeger.meyve3.text = "Ã‡ilek: " + gameManeger.mey[2];
             Destroy(other.gameObject);
             count += 1;
             CounterText.text = "Toplanan : " + count;
@@ -103,7 +96,7 @@ public class PlayerController : MonoBehaviour
         else if (other.gameObject.CompareTag("Meyve5") && gameManeger.mey[4] > 0)
         {
             gameManeger.mey[4]--;
-            gameManeger.meyve5.text = "Viþne: " + gameManeger.mey[4];
+            gameManeger.meyve5.text = "ViÃ¾ne: " + gameManeger.mey[4];
             Destroy(other.gameObject);
             count += 1;
             CounterText.text = "Toplanan : " + count;
